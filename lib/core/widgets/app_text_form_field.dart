@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+// import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shoppe/core/utils/size_helper_extention.dart';
 
+import '../themes/app_color.dart';
 import '../utils/styles.dart';
 
 class AppTextFormField extends StatefulWidget {
@@ -59,6 +61,8 @@ class _AppTextFormFieldState extends State<AppTextFormField> {
   bool secureIcon = true;
   @override
   Widget build(BuildContext context) {
+
+
     return TextFormField(
       onChanged: widget.onChanged,
       focusNode: widget.focusNode,
@@ -74,17 +78,17 @@ class _AppTextFormFieldState extends State<AppTextFormField> {
         isDense: true,
         contentPadding:
             widget.contentPadding ??
-            EdgeInsets.symmetric(horizontal: 20.w, vertical: 18.h),
+            EdgeInsets.symmetric(horizontal: context.setMinSize(16), vertical: context.setMinSize(18)),
         focusedBorder:
-            widget.focusedBorder ?? outLineBorder(color: Colors.black87),
+            widget.focusedBorder ?? outLineBorder(color: AppColor.primary),
         enabledBorder:
-            widget.enabledBorder ?? outLineBorder(color: Colors.grey.shade300),
-        errorBorder: outLineBorder(color: Colors.red),
-        focusedErrorBorder: outLineBorder(color: Colors.red),
-        hintStyle: widget.hintStyle ?? Styles.small,
+            widget.enabledBorder ?? outLineBorder(color: AppColor.secondary),
+        errorBorder: outLineBorder(color: AppColor.error),
+        focusedErrorBorder: outLineBorder(color: AppColor.error),
+        hintStyle: widget.hintStyle ?? context.small,
         hintText: widget.hintText,
         prefixIcon: widget.suffixIcon,
-        fillColor: widget.backgroundColor ?? Colors.grey.shade200,
+        fillColor: widget.backgroundColor ?? AppColor.surface,
         filled: true,
         suffixIcon: widget.isObscureText
             ? InkWell(
@@ -101,9 +105,9 @@ class _AppTextFormFieldState extends State<AppTextFormField> {
             : widget.prefixIcon,
       ),
       obscureText: widget.isObscureText ? true : false,
-      style: Styles.small.copyWith(
+      style: context.small.copyWith(
         fontWeight: FontWeight.w500,
-        color: Colors.black,
+        color: AppColor.primary,
       ),
       validator: (value) {
         return widget.validator(value);
@@ -114,7 +118,7 @@ class _AppTextFormFieldState extends State<AppTextFormField> {
   OutlineInputBorder outLineBorder({required Color color}) {
     return OutlineInputBorder(
       borderSide: BorderSide(color: color, width: 1.3),
-      borderRadius: BorderRadius.circular(16.0.r),
+      borderRadius: BorderRadius.circular(context.setMinSize(16)),
     );
   }
 }
