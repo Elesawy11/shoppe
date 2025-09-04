@@ -6,8 +6,8 @@ import '../../../../../core/utils/assets.dart';
 import '../../../../../core/utils/size_provider.dart';
 import '../../../../../core/widgets/app_text_button.dart';
 
-class GooglButtonWidget extends StatelessWidget {
-  const GooglButtonWidget({super.key});
+class GoogleButtonWidget extends StatelessWidget {
+  const GoogleButtonWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

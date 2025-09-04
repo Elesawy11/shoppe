@@ -61,8 +61,6 @@ class _AppTextFormFieldState extends State<AppTextFormField> {
   bool secureIcon = true;
   @override
   Widget build(BuildContext context) {
-
-
     return TextFormField(
       onChanged: widget.onChanged,
       focusNode: widget.focusNode,
@@ -78,7 +76,10 @@ class _AppTextFormFieldState extends State<AppTextFormField> {
         isDense: true,
         contentPadding:
             widget.contentPadding ??
-            EdgeInsets.symmetric(horizontal: context.setMinSize(16), vertical: context.setMinSize(18)),
+            EdgeInsets.symmetric(
+              horizontal: context.setMinSize(16),
+              vertical: context.setMinSize(18),
+            ),
         focusedBorder:
             widget.focusedBorder ?? outLineBorder(color: AppColor.primary),
         enabledBorder:
@@ -104,7 +105,7 @@ class _AppTextFormFieldState extends State<AppTextFormField> {
               )
             : widget.prefixIcon,
       ),
-      obscureText: widget.isObscureText ? true : false,
+      obscureText: secureIcon ? true : false,
       style: context.small.copyWith(
         fontWeight: FontWeight.w500,
         color: AppColor.primary,

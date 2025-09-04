@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:shoppe/core/routing/routes.dart';
+import 'package:shoppe/core/helpers/spacer_extension.dart';
 import 'package:shoppe/core/utils/app_padding.dart';
 import 'package:shoppe/core/utils/styles.dart';
-import '../../../../core/helpers/spacer_extension.dart';
 import '../../../../core/themes/app_color.dart';
 import 'widgets/change_auth_widget.dart';
 import 'widgets/google_button_widget.dart';
@@ -11,8 +10,8 @@ import 'widgets/login_button_and_field_widget.dart';
 import 'widgets/logo_images_widget.dart';
 import 'widgets/or_and_divider_widget.dart';
 
-class LoginView extends StatelessWidget {
-  const LoginView({super.key});
+class SignUpView extends StatelessWidget {
+  const SignUpView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +41,7 @@ class LoginView extends StatelessWidget {
                     style: context.small.copyWith(color: AppColor.secondary),
                   ),
                   context.verticalSpace(60),
-                  const LoginButtonAndFieldsWidget(isSignup: false),
+                  const LoginButtonAndFieldsWidget(isSignup: true),
                   context.verticalSpace(24),
                   const OrAndDividerWidget(),
                   context.verticalSpace(24),
@@ -50,9 +49,9 @@ class LoginView extends StatelessWidget {
                   context.verticalSpace(24),
                   Center(
                     child: ChangeAuthWidget(
-                      text: 'Don\'t have an account? ',
-                      methodName: 'Register',
-                      onTap: () => context.push(Routes.signup),
+                      text: 'Already have an account? ',
+                      methodName: 'Login',
+                      onTap: () => context.pop(),
                     ),
                   ),
                   context.verticalSpace(12),
