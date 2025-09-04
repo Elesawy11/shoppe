@@ -1,5 +1,6 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
+import 'package:shoppe/core/themes/app_color.dart';
 import 'package:shoppe/core/utils/size_helper_extention.dart';
 import 'core/routing/router.dart';
 import 'core/utils/size_provider.dart';
@@ -18,6 +19,7 @@ class Shoppe extends StatelessWidget {
       width: context.screenWidth,
       height: context.screenHeight,
       child: MaterialApp.router(
+        theme: ThemeData(scaffoldBackgroundColor: AppColor.white),
         builder: (context, child) {
           return MediaQuery(data: MediaQuery.of(context), child: child!);
         },
