@@ -42,7 +42,10 @@ class LoginView extends StatelessWidget {
                     style: context.small.copyWith(color: AppColor.secondary),
                   ),
                   context.verticalSpace(60),
-                  const LoginButtonAndFieldsWidget(isSignup: false),
+                  LoginButtonAndFieldsWidget(
+                    isSignup: false,
+                    onPressed: () => context.pushReplacement(Routes.home),
+                  ),
                   context.verticalSpace(24),
                   const OrAndDividerWidget(),
                   context.verticalSpace(24),

@@ -24,4 +24,3 @@ class SizeProvider extends InheritedWidget {
         oldWidget.height != height;
   }
 }
-

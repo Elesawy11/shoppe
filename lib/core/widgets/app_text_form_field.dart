@@ -62,6 +62,7 @@ class _AppTextFormFieldState extends State<AppTextFormField> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      
       onChanged: widget.onChanged,
       focusNode: widget.focusNode,
       onTapOutside: widget.onTapOutside,
