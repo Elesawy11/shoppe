@@ -62,7 +62,6 @@ class _AppTextFormFieldState extends State<AppTextFormField> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      
       onChanged: widget.onChanged,
       focusNode: widget.focusNode,
       onTapOutside: widget.onTapOutside,
@@ -89,7 +88,7 @@ class _AppTextFormFieldState extends State<AppTextFormField> {
         focusedErrorBorder: outLineBorder(color: AppColor.error),
         hintStyle: widget.hintStyle ?? context.small,
         hintText: widget.hintText,
-        prefixIcon: widget.suffixIcon,
+        prefixIcon: widget.prefixIcon,
         fillColor: widget.backgroundColor ?? AppColor.surface,
         filled: true,
         suffixIcon: widget.isObscureText
@@ -104,7 +103,7 @@ class _AppTextFormFieldState extends State<AppTextFormField> {
                       : Icons.visibility_outlined,
                 ),
               )
-            : widget.prefixIcon,
+            : widget.suffixIcon,
       ),
       obscureText: secureIcon ? true : false,
       style: context.small.copyWith(

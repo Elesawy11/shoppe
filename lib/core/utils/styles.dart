@@ -9,7 +9,8 @@ extension Styles on BuildContext {
 
   TextStyle get subtitle =>
       TextStyle(fontSize: setSp(20), fontWeight: FontWeight.w600);
-
+  TextStyle get homeBody =>
+      TextStyle(fontSize: setSp(18), fontWeight: FontWeight.w700);
   TextStyle get body =>
       TextStyle(fontSize: setSp(16), fontWeight: FontWeight.normal);
 

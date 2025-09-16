@@ -6,4 +6,5 @@ abstract class AppColor {
   static const Color secondary = Color(0xFF666666);
   static const Color surface = Color(0xFFF5F5F5);
   static const Color error = Color(0xFFFF0000);
+  static const Color grayDD = Color(0xFFDDDDDD);
 }
