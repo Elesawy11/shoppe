@@ -13,6 +13,7 @@ class CustomProductWidget extends StatelessWidget {
     return SizedBox(
       width: context.screenWidth * 0.45,
 
+      // height: context.screenHeight * 0.4,
       child: Column(
         children: [
           ClipRRect(
@@ -20,7 +21,7 @@ class CustomProductWidget extends StatelessWidget {
             child: Image.asset(
               Assets.imagesProduct,
               fit: BoxFit.cover,
-              width: context.screenWidth * 0.45,
+              // width: context.screenWidth * 0.45,
               height: context.screenWidth * 0.45,
             ),
           ),
@@ -29,12 +30,14 @@ class CustomProductWidget extends StatelessWidget {
             textAlign: TextAlign.center,
             style: context.homeBody,
             maxLines: 1,
+            overflow: TextOverflow.ellipsis,
           ),
           Text(
-            'Product descriptiondsfdfsdfsdf',
+            'Product description',
             maxLines: 2,
             textAlign: TextAlign.center,
             style: context.body.copyWith(color: AppColor.secondary),
+            overflow: TextOverflow.ellipsis,
           ),
           Text(
             '\$100',

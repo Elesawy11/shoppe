@@ -14,8 +14,8 @@ class LogoImagesWidget extends StatelessWidget {
           child: Image.asset(
             Assets.imagesSplash,
             fit: BoxFit.cover,
-            height: context.getWidth * 0.25,
-            width: context.getWidth * 0.25,
+            height: context.screenWidth * 0.25,
+            width: context.screenWidth * 0.25,
           ),
         ),
         Center(
@@ -23,7 +23,7 @@ class LogoImagesWidget extends StatelessWidget {
             Assets.imagesTitle,
             fit: BoxFit.cover,
 
-            width: context.getWidth * 0.25,
+            width: context.screenWidth * 0.25,
           ),
         ),
       ],

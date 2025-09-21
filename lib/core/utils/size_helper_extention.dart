@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'size_provider.dart';
 
 extension SizeHelperExtention on BuildContext {
-  double get getWidth => MediaQuery.of(this).size.width;
-  double get getHeight => MediaQuery.of(this).size.height;
+  // double get getWidth => MediaQuery.of(this).size.width;
+  // double get getHeight => MediaQuery.of(this).size.height;
   // Check if the device is in landscape mode and update the layout accordingly
   bool get isLandScape =>
       MediaQuery.of(this).orientation == Orientation.landscape;

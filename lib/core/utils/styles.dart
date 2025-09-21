@@ -13,6 +13,8 @@ extension Styles on BuildContext {
       TextStyle(fontSize: setSp(18), fontWeight: FontWeight.w700);
   TextStyle get body =>
       TextStyle(fontSize: setSp(16), fontWeight: FontWeight.normal);
+      TextStyle get bodyBold =>
+      TextStyle(fontSize: setSp(16), fontWeight: FontWeight.bold);
 
   TextStyle get small =>
       TextStyle(fontSize: setSp(14), fontWeight: FontWeight.normal);

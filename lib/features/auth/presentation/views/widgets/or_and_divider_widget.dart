@@ -11,7 +11,7 @@ class OrAndDividerWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         SizedBox(
-          width: context.getWidth * 0.3,
+          width: context.screenWidth * 0.3,
           child: const Divider(height: 2),
         ),
         Padding(
@@ -19,7 +19,7 @@ class OrAndDividerWidget extends StatelessWidget {
           child: Text('or', style: context.small),
         ),
         SizedBox(
-          width: context.getWidth * 0.3,
+          width: context.screenWidth * 0.3,
           child: const Divider(height: 2),
         ),
       ],
