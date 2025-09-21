@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:shoppe/core/helpers/spacer_extension.dart';
 import 'package:shoppe/core/utils/app_padding.dart';
-import 'package:shoppe/core/utils/size_helper_extention.dart';
 import 'package:shoppe/core/utils/styles.dart';
+import 'widgets/custom_categories_sliver_grid_widget.dart';
 import 'widgets/custom_categorieswidget.dart';
-import 'widgets/custom_product_widget.dart';
 import 'widgets/custom_search_and_filter_widget.dart';
 import 'widgets/custom_welcome_and_notification_widget.dart';
 
@@ -37,17 +36,7 @@ class HomeView extends StatelessWidget {
                   ],
                 ),
               ),
-              SliverGrid.builder(
-                gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-                  maxCrossAxisExtent: context.setWidth(200),
-                  crossAxisSpacing: context.setMinSize(8),
-                  // crossAxisCount: 2,
-                  childAspectRatio: 2 / 3,
-                ),
-                itemBuilder: (context, index) {
-                  return const CustomProductWidget();
-                },
-              ),
+              const CustomCategoriesSliverGridWidget(),
             ],
           ),
         ),
