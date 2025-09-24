@@ -2,6 +2,7 @@ import 'package:go_router/go_router.dart';
 import 'package:shoppe/features/auth/presentation/views/login_view.dart';
 import 'package:shoppe/features/cart/presentation/views/cart_view.dart';
 import 'package:shoppe/features/notification/presentation/views/notification_view.dart';
+import 'package:shoppe/features/product/presentation/views/product_view.dart';
 import 'package:shoppe/features/profile/presentation/views/profile_view.dart';
 import '../widgets/app_navigation_bar.dart';
 import '../../features/auth/presentation/views/sign_up_view.dart';
@@ -18,10 +19,7 @@ final router = GoRouter(
       path: Routes.signup,
       builder: (context, state) => const SignUpView(),
     ),
-    // GoRoute(
-    //   path: Routes.home,
-    //   builder: (context, state) => const HomeView(),
-    // ),
+
     StatefulShellRoute.indexedStack(
       builder: (context, state, navigationShell) => AppNavigationBar(
         navigationShell: navigationShell,
@@ -46,14 +44,16 @@ final router = GoRouter(
               builder: (context, state) => const CartView(),
             ),
           ],
-        ),StatefulShellBranch(
+        ),
+        StatefulShellBranch(
           routes: [
             GoRoute(
               path: Routes.notification,
               builder: (context, state) => const NotificationView(),
             ),
           ],
-        ),StatefulShellBranch(
+        ),
+        StatefulShellBranch(
           routes: [
             GoRoute(
               path: Routes.profile,
@@ -62,6 +62,10 @@ final router = GoRouter(
           ],
         ),
       ],
+    ),
+    GoRoute(
+      path: Routes.product,
+      builder: (context, state) => const ProductView(),
     ),
   ],
 );
