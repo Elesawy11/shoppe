@@ -27,4 +27,6 @@ extension Styles on BuildContext {
 
   TextStyle get success =>
       TextStyle(fontSize: setSp(16), fontWeight: FontWeight.bold);
+      TextStyle get notifiNumber =>
+      TextStyle(fontSize: setSp(10), fontWeight: FontWeight.normal);
 }

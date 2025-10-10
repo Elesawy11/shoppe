@@ -41,7 +41,7 @@ final router = GoRouter(
           routes: [
             GoRoute(
               path: Routes.cart,
-              builder: (context, state) => const CartView(),
+              builder: (context, state) =>  CartView(),
             ),
           ],
         ),

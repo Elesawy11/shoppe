@@ -4,17 +4,10 @@ import 'package:shoppe/core/helpers/spacer_extension.dart';
 import 'package:shoppe/core/utils/size_helper_extention.dart';
 import 'package:shoppe/core/utils/styles.dart';
 
-class CustomTitleRatingQuantityOfProductWidget extends StatefulWidget {
+import 'custom_quantity_widget.dart';
+
+class CustomTitleRatingQuantityOfProductWidget extends StatelessWidget {
   const CustomTitleRatingQuantityOfProductWidget({super.key});
-
-  @override
-  State<CustomTitleRatingQuantityOfProductWidget> createState() =>
-      _CustomTitleRatingQuantityOfProductWidgetState();
-}
-
-class _CustomTitleRatingQuantityOfProductWidgetState
-    extends State<CustomTitleRatingQuantityOfProductWidget> {
-  int quantity = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -48,36 +41,7 @@ class _CustomTitleRatingQuantityOfProductWidgetState
         ),
 
         /// Quantity
-        Container(
-          padding: EdgeInsets.symmetric(horizontal: context.setMinSize(8)),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(context.setMinSize(12)),
-            border: Border.all(color: Colors.grey.shade400),
-          ),
-          child: Row(
-            children: [
-              IconButton(
-                onPressed: () {
-                  if (quantity > 1) {
-                    setState(() {
-                      quantity--;
-                    });
-                  }
-                },
-                icon: Icon(Icons.remove, size: context.setMinSize(20)),
-              ),
-              Text("$quantity", style: TextStyle(fontSize: context.setSp(16))),
-              IconButton(
-                onPressed: () {
-                  setState(() {
-                    quantity++;
-                  });
-                },
-                icon: Icon(Icons.add, size: context.setMinSize(20)),
-              ),
-            ],
-          ),
-        ),
+        const CustomQuantityWidget(),
       ],
     );
   }

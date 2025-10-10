@@ -23,7 +23,7 @@ class CustomDimensionBoxWidget extends StatelessWidget {
             vertical: context.setHeight(8),
           ),
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(context.setMinSize(12)),
+            borderRadius: BorderRadius.circular(context.setMinSize(20)),
             border: Border.all(color: Colors.grey.shade400),
           ),
           child: Text("$value", style: context.body),
