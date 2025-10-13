@@ -1,7 +1,7 @@
 import 'package:go_router/go_router.dart';
 import 'package:shoppe/features/auth/presentation/views/login_view.dart';
 import 'package:shoppe/features/cart/presentation/views/cart_view.dart';
-import 'package:shoppe/features/notification/presentation/views/notification_view.dart';
+import 'package:shoppe/features/wishlist/presentation/views/wish_list_view.dart';
 import 'package:shoppe/features/product/presentation/views/product_view.dart';
 import 'package:shoppe/features/profile/presentation/views/profile_view.dart';
 import '../widgets/app_navigation_bar.dart';
@@ -41,7 +41,7 @@ final router = GoRouter(
           routes: [
             GoRoute(
               path: Routes.cart,
-              builder: (context, state) =>  CartView(),
+              builder: (context, state) => const CartView(),
             ),
           ],
         ),
@@ -49,7 +49,7 @@ final router = GoRouter(
           routes: [
             GoRoute(
               path: Routes.notification,
-              builder: (context, state) => const NotificationView(),
+              builder: (context, state) => const WishListView(),
             ),
           ],
         ),

@@ -14,6 +14,8 @@ class Assets {
 
   static const String svg_imagesActiveCartIcon = "assets/svg_images/active_cart_icon.svg";
 
+  static const String svg_imagesActiveHeartIcon = "assets/svg_images/active_heart_icon.svg";
+
   static const String svg_imagesActiveNotifiIcon = "assets/svg_images/active_notifi_icon.svg";
 
   static const String svg_imagesActiveProfileIcon = "assets/svg_images/active_profile_icon.svg";
@@ -21,6 +23,8 @@ class Assets {
   static const String svg_imagesCartIcon = "assets/svg_images/cart_icon.svg";
 
   static const String svg_imagesFilterIcon = "assets/svg_images/filter_icon.svg";
+
+  static const String svg_imagesHeartIcon = "assets/svg_images/heart_icon.svg";
 
   static const String svg_imagesHomeActiveIcon = "assets/svg_images/home_active_icon.svg";
 

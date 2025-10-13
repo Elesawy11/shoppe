@@ -16,9 +16,9 @@ class Constants {
       label: 'Cart',
     ),
     NavigationBarItemsImagesModel(
-      imageIcon: Assets.svg_imagesNotifiIcon,
-      activeImageIcon: Assets.svg_imagesActiveNotifiIcon,
-      label: 'Notifi',
+      imageIcon: Assets.svg_imagesHeartIcon,
+      activeImageIcon: Assets.svg_imagesActiveHeartIcon,
+      label: 'wishList',
     ),
     NavigationBarItemsImagesModel(
       imageIcon: Assets.svg_imagesProfileIcon,
